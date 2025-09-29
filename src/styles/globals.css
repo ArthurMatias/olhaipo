@@ -39,7 +39,7 @@
   --sidebar-accent-foreground: #2d1b69;
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: #6366f1;
-  
+
   /* Gradient colors for special components */
   --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
   --gradient-secondary: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
@@ -167,7 +167,7 @@
 }
 
 .border-gradient::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   padding: 1px;
@@ -244,4 +244,64 @@
 
 html {
   font-size: var(--font-size);
+}
+
+/* Dialog and Modal fixes */
+[data-radix-popper-content-wrapper] {
+  z-index: 100 !important;
+}
+
+[data-slot="dialog-overlay"] {
+  z-index: 90 !important;
+}
+
+[data-slot="dialog-content"] {
+  z-index: 100 !important;
+}
+
+/* Ensure calendar components are properly styled */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-caption-font-size: 18px;
+  --rdp-accent-color: var(--primary);
+  --rdp-background-color: var(--primary);
+  --rdp-accent-color-dark: var(--primary);
+  --rdp-background-color-dark: var(--primary);
+  margin: 0;
+}
+
+.rdp-months {
+  display: flex;
+  justify-content: center;
+}
+
+.rdp-month {
+  margin: 0;
+}
+
+.rdp-table {
+  margin: 0;
+  max-width: none;
+}
+
+.rdp-head_cell,
+.rdp-cell {
+  width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.rdp-day_selected {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.rdp-day_selected:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  opacity: 0.9;
 }

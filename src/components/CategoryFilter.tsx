@@ -1,14 +1,23 @@
-import { Home, Users, Music, Utensils, Waves, TreePine, Camera, Sparkles } from 'lucide-react';
+import {
+  Home,
+  Users,
+  Music,
+  Utensils,
+  Waves,
+  TreePine,
+  Camera,
+  Sparkles,
+} from "lucide-react";
 
 const categories = [
-  { id: 'casas', name: 'Casas', icon: Home },
-  { id: 'grandes-grupos', name: 'Grandes grupos', icon: Users },
-  { id: 'pista-danca', name: 'Pista de dança', icon: Music },
-  { id: 'churrasqueira', name: 'Churrasqueira', icon: Utensils },
-  { id: 'piscina', name: 'Piscina', icon: Waves },
-  { id: 'area-verde', name: 'Área verde', icon: TreePine },
-  { id: 'estudio', name: 'Estúdio foto', icon: Camera },
-  { id: 'luxo', name: 'Luxo', icon: Sparkles },
+  { id: "casas", name: "Casas", icon: Home },
+  { id: "grandes-grupos", name: "Grandes grupos", icon: Users },
+  { id: "pista-danca", name: "Pista de dança", icon: Music },
+  { id: "churrasqueira", name: "Churrasqueira", icon: Utensils },
+  { id: "piscina", name: "Piscina", icon: Waves },
+  { id: "area-verde", name: "Área verde", icon: TreePine },
+  { id: "estudio", name: "Estúdio foto", icon: Camera },
+  { id: "luxo", name: "Luxo", icon: Sparkles },
 ];
 
 export function CategoryFilter() {

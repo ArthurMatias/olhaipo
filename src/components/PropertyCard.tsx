@@ -1,5 +1,5 @@
-import { Heart, Star } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Heart, Star } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface PropertyCardProps {
   id: string;
@@ -11,6 +11,7 @@ interface PropertyCardProps {
   imageUrl: string;
   capacity: number;
   type: string;
+  onClick?: (id: string) => void;
 }
 
 export function PropertyCard({
@@ -23,9 +24,13 @@ export function PropertyCard({
   imageUrl,
   capacity,
   type,
+  onClick,
 }: PropertyCardProps) {
   return (
-    <div className="group cursor-pointer hover:scale-[1.02] transition-all duration-300">
+    <div
+      className="group cursor-pointer hover:scale-[1.02] transition-all duration-300"
+      onClick={() => onClick?.(id)}
+    >
       <div className="relative aspect-square rounded-xl overflow-hidden mb-3 ring-1 ring-primary/10 group-hover:ring-primary/30 group-hover:shadow-xl transition-all duration-300">
         <ImageWithFallback
           src={imageUrl}
@@ -41,23 +46,31 @@ export function PropertyCard({
           </span>
         </div>
       </div>
-      
+
       <div className="space-y-1">
         <div className="flex items-center justify-between">
-          <h3 className="font-medium text-foreground truncate group-hover:text-primary transition-colors">{title}</h3>
+          <h3 className="font-medium text-foreground truncate group-hover:text-primary transition-colors">
+            {title}
+          </h3>
           <div className="flex items-center space-x-1">
             <Star className="h-4 w-4 fill-current text-accent" />
-            <span className="text-sm font-medium text-foreground">{rating}</span>
-            <span className="text-sm text-muted-foreground">({reviewCount})</span>
+            <span className="text-sm font-medium text-foreground">
+              {rating}
+            </span>
+            <span className="text-sm text-muted-foreground">
+              ({reviewCount})
+            </span>
           </div>
         </div>
-        
+
         <p className="text-sm text-muted-foreground">{location}</p>
         <p className="text-sm text-muted-foreground">Até {capacity} pessoas</p>
-        
+
         <div className="flex items-center justify-between mt-2">
           <div>
-            <span className="font-semibold text-gradient-primary">R$ {price.toLocaleString()}</span>
+            <span className="font-semibold text-gradient-primary">
+              R$ {price.toLocaleString()}
+            </span>
             <span className="text-sm text-muted-foreground"> /diária</span>
           </div>
         </div>

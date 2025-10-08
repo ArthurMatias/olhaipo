@@ -16,6 +16,7 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Calendar } from "./ui/calendar";
+import logoImage from "../data/img/logo.png";
 
 interface HeaderProps {
   onNavigate?: (page: string) => void;
@@ -51,9 +52,13 @@ export function Header({ onNavigate, currentPage }: HeaderProps) {
           <div className="flex items-center">
             <button
               onClick={() => onNavigate?.("home")}
-              className="text-2xl font-bold text-gradient-primary hover:opacity-80 transition-opacity"
+              className="flex items-center"
             >
-              olhaipô
+              <img
+                src={logoImage}
+                alt="olhaipô"
+                className="h-10 w-auto object-contain"
+              />
             </button>
           </div>
 

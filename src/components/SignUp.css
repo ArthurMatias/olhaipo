@@ -1,0 +1,32 @@
+p,
+placeholder {
+  font-size: 16px;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-primary {
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+}
+
+input {
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.card_geral {
+  margin-top: -10vh;
+}
+.titulo_card p {
+  margin-bottom: 3vh;
+}
+.botao_card {
+  margin-top: 3vh;
+}

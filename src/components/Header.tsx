@@ -7,7 +7,6 @@ import {
   Calendar as CalendarIcon,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
 import {
   Dialog,
   DialogContent,
@@ -199,30 +198,6 @@ export function Header({ onNavigate, currentPage }: HeaderProps) {
             >
               Anuncie seu espaço
             </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-primary hover:text-accent"
-            >
-              <Globe className="h-4 w-4" />
-            </Button>
-            <div className="flex items-center space-x-2">
-              {currentPage !== "signup" && (
-                <Button
-                  variant="ghost"
-                  onClick={() => onNavigate?.("signup")}
-                  className="text-primary hover:text-accent"
-                >
-                  Cadastrar
-                </Button>
-              )}
-              <div className="flex items-center space-x-2 border border-primary/30 rounded-full p-2 hover:shadow-lg hover:border-primary/50 transition-all duration-200 cursor-pointer">
-                <Menu className="h-4 w-4 text-primary" />
-                <div className="w-6 h-6 gradient-secondary rounded-full flex items-center justify-center">
-                  <User className="h-3 w-3 text-white" />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

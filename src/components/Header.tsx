@@ -198,6 +198,17 @@ export function Header({ onNavigate, currentPage }: HeaderProps) {
             >
               Anuncie seu espaço
             </Button>
+            <div className="flex items-center space-x-2">
+              {currentPage !== "signup" && (
+                <Button
+                  variant="ghost"
+                  onClick={() => onNavigate?.("signup")}
+                  className="text-primary hover:text-accent"
+                >
+                  Cadastrar
+                </Button>
+              )}
+            </div>
           </div>
         </div>
 
